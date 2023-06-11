@@ -16,7 +16,8 @@ const table = document.getElementById("table");
 
 //!FUNZIONE START
 async function start() {
-    const res = await fetch(edpoint, {
+    try {
+        const res = await fetch(edpoint, {
         headers: {
             "Authorization": apiKey
         }
@@ -31,6 +32,10 @@ async function start() {
         let keyword = searchBar.value;
         searchCard(json, keyword);
     })
+    } catch (error) {
+        console.log(error);
+    }
+    
 }
 start();
 

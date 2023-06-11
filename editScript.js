@@ -21,13 +21,18 @@ const query = params.get("id");
 
 //*CHIAMATA AJAX verso detailsEndpoint + query
 async function start() {
-    const res = await fetch(detailsEndpoint + query, {
+    try {
+        const res = await fetch(detailsEndpoint + query, {
         headers: {
             "Authorization": apiKey
         }
     })
     const json = await res.json();
     showDetails(json);
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 start();
 
