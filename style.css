@@ -12,16 +12,18 @@ h5 {
 
 #searchBar {
     width: 60%;
-    height: 1.5rem;
-    border-radius: 45px;
+    height: 1.7rem;
+    border-radius: 0px 45px 45px 0px;
     box-shadow: 1px, 1px, 15px white;
     font-size: 0.8rem;
 }
-
-/* #navBar {
-    background: rgb(134, 122, 108);
-    background: linear-gradient(180deg, rgba(134, 122, 108, 1) 0%, rgba(199, 198, 171, 0.756827731092437) 100%);
-} */
+#selectMenu {
+    width: 20%;
+    height: 1.7rem;
+    border-radius: 45px 0px 0px 45px;
+    box-shadow: 1px, 1px, 15px white;
+    font-size: 0.7rem;
+}
 
 body {
     background: rgb(199, 198, 171);

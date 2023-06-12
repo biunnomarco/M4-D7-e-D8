@@ -20,7 +20,15 @@
         <img alt="logo"
             src="//images.ctfassets.net/s5n2t79q9icq/3dB5uyWzUH95O1ZPBNNUX5/6cff7c65a809285755ea24b164b6ac65/magic-logo.png"
             id="logo" class="p-4"></img>
-        <input class="me-2 text-center" type="search" placeholder="Search" aria-label="Search" id="searchBar">
+        <div class="d-flex justify-content-center" style="width: 80%;">
+            <select class="form-select" aria-label="Default select example" id="selectMenu">
+                <option selected="">Seleziona il campo di ricerca</option>
+                <option value="name">Name</option>
+                <option value="description">Description</option>
+                <option value="brand">Brand</option>
+            </select>
+            <input class="me-2 text-center" type="search" placeholder="Search" aria-label="Search" id="searchBar">
+        </div>
     </div>
     <div class="bg-white mx-5 overflow-x-scroll officeContainer">
         <div class="accordion" id="accordionExample">
@@ -86,15 +94,15 @@
 
     <nav aria-label="Page navigation example" id="pagination" class="d-flex justify-content-center mt-5">
         <ul class="pagination">
-            
+
             <div id="pages" class="d-flex justify-content-center ">
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
             </div>
-            
+
         </ul>
     </nav>
     <footer>
-        
+
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

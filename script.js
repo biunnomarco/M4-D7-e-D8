@@ -11,6 +11,7 @@ const emptyCart = document.getElementById("emptyCart");
 let cartArray = JSON.parse(localStorage.getItem("carrello"));
 const pages = document.getElementById("pages");
 const pagination = document.getElementById("pagination");
+let selectMenu = document.getElementById("selectMenu");
 
 //! Funzione start, esegue chiamata, crea le carte partendo dal json ed il carrello dal local storage
 async function start() {
@@ -29,7 +30,8 @@ async function start() {
         //event listener della funzione cerca, cattura i value e spedisce il payload
         searchBar.addEventListener("input", () => {
             let keyword = searchBar.value;
-            searchCard(json, keyword);
+            let menuChoice = selectMenu.value;
+            searchCard(json, keyword, menuChoice);
         })
         //event listener che svuota il carrello
         emptyCart.addEventListener("click", () => {
@@ -51,11 +53,11 @@ async function start() {
 start();
 
 //!FUNZIONE CERCA
-function searchCard(json, keyword) {
+function searchCard(json, keyword, menuChoice) {
     let researchArr = [];
     let alert = document.getElementById("noResult");
     json.forEach(card => {
-        if (card.name.toLowerCase().includes(keyword.toLowerCase())) {
+        if (card[menuChoice].toLowerCase().includes(keyword.toLowerCase())) {
             researchArr.push(card);
         }
     });
