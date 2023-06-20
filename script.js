@@ -1,6 +1,6 @@
 //!ENDPOINT e API KEY
 let edpoint = "https://striveschool-api.herokuapp.com/api/product/";
-let apiKey = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDdlNTJlOWI5YzBmNzAwMTQ0ODRlZjAiLCJpYXQiOjE2ODYwMDAzNjEsImV4cCI6MTY4NzIwOTk2MX0.t4IUaky4rMqAI390lRFEqsOGCoyv5p6Sl8287WmX4EA";
+let apiKey = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDdlNTJlOWI5YzBmNzAwMTQ0ODRlZjAiLCJpYXQiOjE2ODcyODE2OTYsImV4cCI6MTY4ODQ5MTI5Nn0.alu0t6KcY4ujMWacwQyz6488qSZmu8zN5JeLDO1xJpk";
 
 //* costanti
 const cardContainer = document.getElementById("cardContainer");
@@ -8,7 +8,7 @@ const searchBar = document.getElementById("searchBar");
 const postButton = document.getElementById("postButton");
 const carrello = document.getElementById("carrello");
 const emptyCart = document.getElementById("emptyCart");
-let cartArray = JSON.parse(localStorage.getItem("carrello"));
+let cartArray = (JSON.parse(localStorage.getItem("carrello"))) ? JSON.parse(localStorage.getItem("carrello")) :  [];
 const pages = document.getElementById("pages");
 const pagination = document.getElementById("pagination");
 let selectMenu = document.getElementById("selectMenu");
